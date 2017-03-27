@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ttanks.dbf_2_cf", "ttanks.d
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ttanks.inheritance_single", "ttanks.inheritance_single\ttanks.inheritance_single.csproj", "{79043918-C0DF-4F38-8DEC-42C167C0F175}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ttanks.inheritance_class", "ttanks.inheritance_class\ttanks.inheritance_class.csproj", "{919F030B-C19A-4781-BE28-1727D26054B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{79043918-C0DF-4F38-8DEC-42C167C0F175}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79043918-C0DF-4F38-8DEC-42C167C0F175}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79043918-C0DF-4F38-8DEC-42C167C0F175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{919F030B-C19A-4781-BE28-1727D26054B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919F030B-C19A-4781-BE28-1727D26054B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{919F030B-C19A-4781-BE28-1727D26054B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{919F030B-C19A-4781-BE28-1727D26054B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
