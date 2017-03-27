@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ttanks.ef.dbf_1", "ttanks.ef.dbf_1\ttanks.ef.dbf_1.csproj", "{AE32D5A6-F6C3-4100-AF61-87CF807B00DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ttanks.ef.mdf_1", "ttanks.ef.mdf_1\ttanks.ef.mdf_1.csproj", "{53787A8D-ADA9-4686-A818-BAC562FA967C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AE32D5A6-F6C3-4100-AF61-87CF807B00DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE32D5A6-F6C3-4100-AF61-87CF807B00DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE32D5A6-F6C3-4100-AF61-87CF807B00DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53787A8D-ADA9-4686-A818-BAC562FA967C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53787A8D-ADA9-4686-A818-BAC562FA967C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53787A8D-ADA9-4686-A818-BAC562FA967C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53787A8D-ADA9-4686-A818-BAC562FA967C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
