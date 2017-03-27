@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ttanks.ef.mdf_1", "ttanks.e
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ttanks.dbf_2_cf", "ttanks.dbf_2_cf\ttanks.dbf_2_cf.csproj", "{0E300010-12C5-4825-B6A5-E939FC39A7A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ttanks.inheritance_single", "ttanks.inheritance_single\ttanks.inheritance_single.csproj", "{79043918-C0DF-4F38-8DEC-42C167C0F175}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0E300010-12C5-4825-B6A5-E939FC39A7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E300010-12C5-4825-B6A5-E939FC39A7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E300010-12C5-4825-B6A5-E939FC39A7A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79043918-C0DF-4F38-8DEC-42C167C0F175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79043918-C0DF-4F38-8DEC-42C167C0F175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79043918-C0DF-4F38-8DEC-42C167C0F175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79043918-C0DF-4F38-8DEC-42C167C0F175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
