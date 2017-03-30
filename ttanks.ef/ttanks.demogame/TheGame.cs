@@ -5,9 +5,14 @@ namespace ttanks.demogame
 {
     internal static class TheGame
     {
+
+        public static GameContext GameContext = new GameContext();
+
         public static void Start()
         {
             Console.WriteLine("Press n for new player.");
+            Console.WriteLine("Press g for new game.");
+            Console.WriteLine("Press h for history by nick.");
             Console.WriteLine("Press e for new exit.");
             var cmd = Console.ReadLine();
 
@@ -24,6 +29,12 @@ namespace ttanks.demogame
                 case "n":
                     ManageNewPlayer();
                     break;
+                case "h":
+                    HistoryForPlayer();
+                    break;
+                case "g":
+                    NewGameManager();
+                    break;
                 case "e":
                     Exit();
                     break;
@@ -31,6 +42,18 @@ namespace ttanks.demogame
                     Retry();
                     return;
             }
+        }
+
+        private static void HistoryForPlayer()
+        {
+            var playerService = new PlayerServices();
+            playerService.HistoryForPlayer();
+        }
+
+        private static void NewGameManager()
+        {
+            var gameService = new GameServices(new PlayerServices());
+            gameService.StartNewGame();
         }
 
         private static void Retry()

@@ -7,6 +7,13 @@ namespace ttanks.demogame.Domain
 {
     public class Player : DomainBase
     {
+
+        public Player()
+        {
+            // ReSharper disable once VirtualMemberCallInConstructor
+            this.Matches = new List<Match>();
+        }
+
         public string Nick { get; set; }
         public int Luck { get; set; }
 

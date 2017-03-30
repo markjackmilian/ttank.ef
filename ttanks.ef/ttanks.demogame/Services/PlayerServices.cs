@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ttanks.demogame.Domain;
 
 namespace ttanks.demogame.Services
@@ -21,11 +18,8 @@ namespace ttanks.demogame.Services
                 return;
             }
 
-            using (var context = new GameContext())
-            {
-                var userByNick =
-                    context.Players.SingleOrDefault(
-                        sd => sd.Nick.Equals(nick, StringComparison.CurrentCultureIgnoreCase));
+            
+                var userByNick = this.GetPlayerByNick(nick);
 
                 if (userByNick != null)
                 {
@@ -34,17 +28,27 @@ namespace ttanks.demogame.Services
                     return;
                 }
 
-                context.Players.Add(this.CreatePlayer(nick));
-                context.SaveChanges();
+            TheGame.GameContext.Players.Add(this.CreatePlayer(nick));
+            TheGame.GameContext.SaveChanges();
 
                 Console.WriteLine("Player Created!");
-
-
                 TheGame.Start();
-                return;
-            }
+            
         }
 
+        public Player GetPlayerByNick(string nick)
+        {
+            return TheGame.GameContext.Players.SingleOrDefault(s=>s.Nick.Equals(nick,StringComparison.CurrentCultureIgnoreCase));
+        }
+
+        /// <summary>
+        /// Get computer player
+        /// </summary>
+        /// <returns></returns>
+        public Player GetDefaultPlayer()
+        {
+            return TheGame.GameContext.Players.Single(s => s.Id == GameConfig.Instance.JarvisId);
+        }
 
         public Player CreatePlayer(string nick)
         {
@@ -54,6 +58,34 @@ namespace ttanks.demogame.Services
                 Luck = GameConfig.Instance.GetRandomLuck()
             };
         }
-    }
 
+        public void HistoryForPlayer()
+        {
+            Console.WriteLine("Insert your nick");
+            var nick = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(nick))
+            {
+                HistoryForPlayer();
+                return;
+            }
+
+            var player = this.GetPlayerByNick(nick);
+
+            var matches = player.Matches.OrderByDescending(o=>o.MatchDate).ToList();
+
+            matches.ForEach(f =>
+            {
+                var win = f.Winner.Id == player.Id ? "Win" : "Lose";
+
+                Console.WriteLine($"{f.MatchDate.ToString("dd.MM.yy HH:mm")} - {f.Points} - {win}!");
+            });
+
+            Console.WriteLine($"You play {matches.Count} times!");
+            Console.WriteLine($"You win {matches.Count(c=>c.Winner.Id == player.Id)} times!");
+
+            Console.ReadLine();
+            TheGame.Start();
+        }
+    }
 }

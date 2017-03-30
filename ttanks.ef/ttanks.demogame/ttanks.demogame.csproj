@@ -55,6 +55,7 @@
     <Compile Include="GameContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GameServices.cs" />
     <Compile Include="Services\PlayerServices.cs" />
     <Compile Include="TheGame.cs" />
   </ItemGroup>

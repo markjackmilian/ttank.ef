@@ -17,6 +17,7 @@ namespace ttanks.demogame
 
         public int MinLuck => 1;
         public int MaxLuck => 20;
+        public int MaxMove => 50;
 
         /// <summary>
         /// Id for Computer player
