@@ -66,20 +66,10 @@ namespace ttanks.demogame.Services
             };
 
 
-            var contextUSer = TheGame.GameContext.Players.Single(s => s.Id == userByNick.Id);
-            TheGame.GameContext.Entry(contextUSer).State = EntityState.Modified;
-            contextUSer.Matches.Add(match);
-
-
-            var defaultContext = TheGame.GameContext.Players.Single(s => s.Id == GameConfig.Instance.JarvisId);
-            TheGame.GameContext.Entry(defaultContext).State = EntityState.Modified;
-
-            defaultContext.Matches.Add(match);
-
-
+            userByNick.Matches.Add(match);
+            defaultPlayer.Matches.Add(match);
             TheGame.GameContext.SaveChanges();
-
-
+            
             TheGame.Start();
 
         }
