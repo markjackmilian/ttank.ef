@@ -9,7 +9,7 @@ namespace ttanks.demogame
     {
         public GameContext() :  base("name=GameEntities")
         {
-            Database.SetInitializer(new GameInitializer());
+            //Database.SetInitializer(new GameInitializer());
         }
 
         public DbSet<Player> Players { get; set; }

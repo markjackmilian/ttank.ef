@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using ttanks.demogame.Domain;
 
 namespace ttanks.demogame.Services
@@ -79,6 +80,10 @@ namespace ttanks.demogame.Services
                 var win = f.Winner.Id == player.Id ? "Win" : "Lose";
 
                 Console.WriteLine($"{f.MatchDate.ToString("dd.MM.yy HH:mm")} - {f.Points} - {win}!");
+
+                if (f.Loser == null) return;
+
+                Console.WriteLine($"Your enemy was: {f.Loser.Nick}");
             });
 
             Console.WriteLine($"You play {matches.Count} times!");

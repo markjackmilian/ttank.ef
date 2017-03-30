@@ -53,6 +53,15 @@
     <Compile Include="Domain\Player.cs" />
     <Compile Include="GameConfig.cs" />
     <Compile Include="GameContext.cs" />
+    <Compile Include="Migrations\201703301244317_InitialCreate.cs" />
+    <Compile Include="Migrations\201703301244317_InitialCreate.Designer.cs">
+      <DependentUpon>201703301244317_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703301341169_AddLoser.cs" />
+    <Compile Include="Migrations\201703301341169_AddLoser.Designer.cs">
+      <DependentUpon>201703301341169_AddLoser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GameServices.cs" />
@@ -62,6 +71,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703301244317_InitialCreate.resx">
+      <DependentUpon>201703301244317_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703301341169_AddLoser.resx">
+      <DependentUpon>201703301341169_AddLoser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

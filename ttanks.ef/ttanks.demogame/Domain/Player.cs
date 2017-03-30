@@ -19,6 +19,6 @@ namespace ttanks.demogame.Domain
 
         public virtual ICollection<Match> Matches { get; set; }
 
-        //todo estrarre match vinti
+        
     }
 }

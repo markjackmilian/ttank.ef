@@ -9,5 +9,7 @@ namespace ttanks.demogame.Domain
         public int Points { get; set; }
 
         public virtual Player Winner { get; set; }
+
+        public virtual Player Loser { get; set; }
     }
 }

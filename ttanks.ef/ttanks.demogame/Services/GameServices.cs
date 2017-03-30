@@ -62,7 +62,8 @@ namespace ttanks.demogame.Services
             {
                 MatchDate = DateTime.Now,
                 Points = userWin ? userPointWithLuck : defaultPointWithLuck,
-                Winner = userWin ? userByNick : defaultPlayer
+                Winner = userWin ? userByNick : defaultPlayer,
+                Loser = !userWin ? userByNick : defaultPlayer,
             };
 
 
