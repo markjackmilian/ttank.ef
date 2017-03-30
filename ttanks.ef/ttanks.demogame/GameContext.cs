@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 using ttanks.demogame.Domain;
+using ttanks.demogame.Services;
 
 namespace ttanks.demogame
 {
@@ -28,11 +29,9 @@ namespace ttanks.demogame
     {
         protected override void Seed(GameContext context)
         {
-            context.Players.Add(new Player
-            {
-                Nick = "Jarvis",
-                Luck = GameConfig.Instance.GetRandomLuck()
-            });
+            var playerService = new PlayerServices();
+            var jarvis = playerService.CreatePlayer("Jarvis");
+            context.Players.Add(jarvis);
 
             context.SaveChanges();
         }

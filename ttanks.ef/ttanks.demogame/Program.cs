@@ -10,23 +10,15 @@ namespace ttanks.demogame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Press n for new player.");
-            var cmd = Console.ReadLine();
-
-            if (string.IsNullOrEmpty(cmd))
+            try
             {
-                Console.WriteLine("No input insert!");
-                Console.Read();
-                return;
+                TheGame.Start();
             }
-
-            if (cmd.Equals("n", StringComparison.CurrentCultureIgnoreCase))
+            catch (Exception e)
             {
-                Console.WriteLine("you press n!");
+                Console.WriteLine(e);
                 Console.ReadLine();
             }
-
-           
         }
     }
 }
